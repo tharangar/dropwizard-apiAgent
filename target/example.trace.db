@@ -1,0 +1,9 @@
+2018-08-21 17:13:24 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "PEOPLE" not found; SQL statement:
+select person0_.id as id1_0_0_, person0_.fullName as fullName2_0_0_, person0_.jobTitle as jobTitle3_0_0_ from people person0_ where person0_.id=? [42102-197]
+2018-08-22 09:43:32 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "PEOPLE" not found; SQL statement:
+select person0_.id as id1_0_0_, person0_.fullName as fullName2_0_0_, person0_.jobTitle as jobTitle3_0_0_ from people person0_ where person0_.id=? [42102-197]
+2018-08-22 09:43:38 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "PEOPLE" not found; SQL statement:
+select person0_.id as id1_0_0_, person0_.fullName as fullName2_0_0_, person0_.jobTitle as jobTitle3_0_0_ from people person0_ where person0_.id=? [42102-197]
