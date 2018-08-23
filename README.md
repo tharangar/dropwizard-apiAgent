@@ -70,7 +70,7 @@ To test the example application run the following commands.
 
 * To run the server run.
 
-        java -jar target/dropwizard-example-$DW_VERSION.jar server example.yml
+        java -jar ./target/cu-agent-1.4.0-SNAPSHOT.jar server example.yml
 
 * To hit the Hello World example (hit refresh a few times).
 
@@ -81,3 +81,28 @@ To test the example application run the following commands.
 	curl -H "Content-Type: application/json" -X POST -d '{"fullName":"Other Person","jobTitle":"Other Title"}' http://localhost:8080/people
 	
 	open http://localhost:8080/people
+	
+* view one person details
+  
+  open http://localhost:8080/people/1
+ 
+ * Run internal shell command
+ 
+ http://localhost:8080/updateav
+ 
+ * Load a User interface instead of a json output
+ 
+ http://localhost:8080/ui/clam
+	
+* Further Development ------------------------------------------------------------------------
+
+ If you are using vscode for development
+ code . 
+ will open the vscode for code editing.
+ 
+ * After code changes you have to package the program again
+ mvn package
+ 
+ * After theat run the server again
+ 
+ java -jar ./target/cu-agent-1.4.0-SNAPSHOT.jar server example.yml
