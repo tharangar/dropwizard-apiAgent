@@ -10,6 +10,9 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import java.util.Objects;
 
+// NamedQueries example
+// https://www.boraji.com/hibernate-5-named-query-example
+
 @Entity
 @Table(name = "people")
 @NamedQueries(
@@ -19,6 +22,7 @@ import java.util.Objects;
             query = "SELECT p FROM Person p"
         )
     })
+
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -61,6 +65,7 @@ public class Person {
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
     }
+
 
     @Override
     public boolean equals(Object o) {

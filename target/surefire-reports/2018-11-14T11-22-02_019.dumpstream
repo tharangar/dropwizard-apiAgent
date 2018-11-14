@@ -1,0 +1,15 @@
+# Created at 2018-11-14T11:22:02.020
+WARNING: An illegal reflective access operation has occurred
+
+# Created at 2018-11-14T11:22:02.020
+WARNING: Illegal reflective access by com.fasterxml.jackson.module.afterburner.util.MyClassLoader (file:/Users/wso2/.m2/repository/com/fasterxml/jackson/module/jackson-module-afterburner/2.9.6/jackson-module-afterburner-2.9.6.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int)
+
+# Created at 2018-11-14T11:22:02.021
+WARNING: Please consider reporting this to the maintainers of com.fasterxml.jackson.module.afterburner.util.MyClassLoader
+
+# Created at 2018-11-14T11:22:02.021
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+
+# Created at 2018-11-14T11:22:02.021
+WARNING: All illegal access operations will be denied in a future release
+

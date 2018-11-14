@@ -155,3 +155,1630 @@ INFO  [2018-08-22 04:11:37,678] org.eclipse.jetty.server.AbstractConnector: Stop
 INFO  [2018-08-22 04:11:37,679] org.eclipse.jetty.server.AbstractConnector: Stopped admin@2da08dcd{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
 INFO  [2018-08-22 04:11:37,681] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@5706ef42{/,null,UNAVAILABLE}
 INFO  [2018-08-22 04:11:37,682] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@2b575e17{/,null,UNAVAILABLE}
+INFO  [2018-11-14 05:15:54,158] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 05:15:54,162] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 05:15:54,163] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 05:15:54,178] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 05:15:54,261] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 05:15:54,278] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@2ef36f36
+INFO  [2018-11-14 05:15:54,278] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@23aa1d40
+INFO  [2018-11-14 05:15:54,279] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@2ff0f24
+INFO  [2018-11-14 05:15:54,279] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@1a45689e
+INFO  [2018-11-14 05:15:54,279] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@7abdb7cf
+INFO  [2018-11-14 05:15:54,279] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@2e7edda3
+INFO  [2018-11-14 05:15:54,279] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@4935477a
+INFO  [2018-11-14 05:15:54,280] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@6106138a
+INFO  [2018-11-14 05:15:54,280] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@24c7f52b
+INFO  [2018-11-14 05:15:54,284] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 05:15:54,308] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 05:15:54,447] org.eclipse.jetty.setuid.SetUIDListener: Opened application@17c458fd{HTTP/1.1,[http/1.1]}{0.0.0.0:65129}
+INFO  [2018-11-14 05:15:54,447] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@28f174c9{HTTP/1.1,[http/1.1]}{0.0.0.0:65130}
+INFO  [2018-11-14 05:15:54,451] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 05:15:54,671] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 05:15:54,674] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@4e700f2b{/,null,AVAILABLE}
+INFO  [2018-11-14 05:15:54,678] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 05:15:54,691] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@7aaf7f34{/,null,AVAILABLE}
+INFO  [2018-11-14 05:15:54,702] org.eclipse.jetty.server.AbstractConnector: Started application@17c458fd{HTTP/1.1,[http/1.1]}{0.0.0.0:65129}
+INFO  [2018-11-14 05:15:54,704] org.eclipse.jetty.server.AbstractConnector: Started admin@28f174c9{HTTP/1.1,[http/1.1]}{0.0.0.0:65130}
+INFO  [2018-11-14 05:15:54,704] org.eclipse.jetty.server.Server: Started @9973ms
+INFO  [2018-11-14 05:15:56,596] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 05:15:56,608] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 05:15:56,610] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 05:15:56,613] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 05:15:56,615] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 05:15:56,617] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 05:15:56,627] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 05:15:57,468] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 05:15:57,469] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 05:15:57,472] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 05:15:57,472] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 05:15:57,473] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 05:15:57,474] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 05:15:57,493] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 05:15:57,497] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 05:15:57,497] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 5ms
+INFO  [2018-11-14 05:15:57,498] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 05:15:57,506] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2172557474')
+INFO  [2018-11-14 05:15:57,509] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 05:15:57,720] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    78960 nanoseconds spent acquiring 1 JDBC connections;
+    35835 nanoseconds spent releasing 1 JDBC connections;
+    17962897 nanoseconds spent preparing 1 JDBC statements;
+    1108329 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    170545 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:15:57,801] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    71641 nanoseconds spent acquiring 1 JDBC connections;
+    27576 nanoseconds spent releasing 1 JDBC connections;
+    383040 nanoseconds spent preparing 1 JDBC statements;
+    194032 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    159019 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:15:57,821] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    51179 nanoseconds spent acquiring 1 JDBC connections;
+    28605 nanoseconds spent releasing 1 JDBC connections;
+    63010 nanoseconds spent preparing 1 JDBC statements;
+    649649 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    180335 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:15:57,827] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    41395 nanoseconds spent acquiring 1 JDBC connections;
+    25249 nanoseconds spent releasing 1 JDBC connections;
+    51310 nanoseconds spent preparing 1 JDBC statements;
+    198324 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    141718 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:15:58,101] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    54804 nanoseconds spent acquiring 1 JDBC connections;
+    21715 nanoseconds spent releasing 1 JDBC connections;
+    44516 nanoseconds spent preparing 1 JDBC statements;
+    190326 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    126452 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:15:58,125] org.eclipse.jetty.server.AbstractConnector: Stopped application@17c458fd{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 05:15:58,126] org.eclipse.jetty.server.AbstractConnector: Stopped admin@28f174c9{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 05:15:58,128] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@7aaf7f34{/,null,UNAVAILABLE}
+INFO  [2018-11-14 05:15:58,129] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@4e700f2b{/,null,UNAVAILABLE}
+INFO  [2018-11-14 05:52:05,740] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 05:52:05,744] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 05:52:05,746] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 05:52:05,774] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 05:52:05,851] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 05:52:05,867] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@43783788
+INFO  [2018-11-14 05:52:05,867] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@4ba64e10
+INFO  [2018-11-14 05:52:05,867] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@586e4706
+INFO  [2018-11-14 05:52:05,867] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@587c276c
+INFO  [2018-11-14 05:52:05,867] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@70a56d5d
+INFO  [2018-11-14 05:52:05,867] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@334ec94d
+INFO  [2018-11-14 05:52:05,867] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@7b17b5ba
+INFO  [2018-11-14 05:52:05,867] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@273cca1e
+INFO  [2018-11-14 05:52:05,868] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@258238d0
+INFO  [2018-11-14 05:52:05,871] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 05:52:05,980] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 05:52:06,122] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5934917{HTTP/1.1,[http/1.1]}{0.0.0.0:65532}
+INFO  [2018-11-14 05:52:06,122] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@28b185fa{HTTP/1.1,[http/1.1]}{0.0.0.0:65533}
+INFO  [2018-11-14 05:52:06,125] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 05:52:06,349] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 05:52:06,353] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@25f40af7{/,null,AVAILABLE}
+INFO  [2018-11-14 05:52:06,358] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 05:52:06,367] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@2a68e9cf{/,null,AVAILABLE}
+INFO  [2018-11-14 05:52:06,377] org.eclipse.jetty.server.AbstractConnector: Started application@5934917{HTTP/1.1,[http/1.1]}{0.0.0.0:65532}
+INFO  [2018-11-14 05:52:06,379] org.eclipse.jetty.server.AbstractConnector: Started admin@28b185fa{HTTP/1.1,[http/1.1]}{0.0.0.0:65533}
+INFO  [2018-11-14 05:52:06,379] org.eclipse.jetty.server.Server: Started @9375ms
+INFO  [2018-11-14 05:52:08,345] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 05:52:08,357] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 05:52:08,359] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 05:52:08,363] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 05:52:08,365] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 05:52:08,367] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 05:52:08,378] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 05:52:09,269] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 05:52:09,270] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 05:52:09,271] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 05:52:09,272] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 05:52:09,272] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 05:52:09,273] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 05:52:09,291] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 05:52:09,293] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 05:52:09,294] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 4ms
+INFO  [2018-11-14 05:52:09,295] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 05:52:09,302] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2174729274')
+INFO  [2018-11-14 05:52:09,305] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 05:52:09,508] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    55792 nanoseconds spent acquiring 1 JDBC connections;
+    35600 nanoseconds spent releasing 1 JDBC connections;
+    16408178 nanoseconds spent preparing 1 JDBC statements;
+    1980370 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    187295 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:52:09,576] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    45780 nanoseconds spent acquiring 1 JDBC connections;
+    37506 nanoseconds spent releasing 1 JDBC connections;
+    364210 nanoseconds spent preparing 1 JDBC statements;
+    201808 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    176243 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:52:09,593] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    52795 nanoseconds spent acquiring 1 JDBC connections;
+    30692 nanoseconds spent releasing 1 JDBC connections;
+    84057 nanoseconds spent preparing 1 JDBC statements;
+    597472 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    160949 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:52:09,601] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    56528 nanoseconds spent acquiring 1 JDBC connections;
+    35947 nanoseconds spent releasing 1 JDBC connections;
+    52179 nanoseconds spent preparing 1 JDBC statements;
+    205931 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    232007 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:52:09,861] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    55647 nanoseconds spent acquiring 1 JDBC connections;
+    34845 nanoseconds spent releasing 1 JDBC connections;
+    74002 nanoseconds spent preparing 1 JDBC statements;
+    258087 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    174535 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 05:52:09,888] org.eclipse.jetty.server.AbstractConnector: Stopped application@5934917{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 05:52:09,889] org.eclipse.jetty.server.AbstractConnector: Stopped admin@28b185fa{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 05:52:09,891] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@2a68e9cf{/,null,UNAVAILABLE}
+INFO  [2018-11-14 05:52:09,893] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@25f40af7{/,null,UNAVAILABLE}
+INFO  [2018-11-14 08:19:58,100] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 08:19:58,103] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 08:19:58,104] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 08:19:58,119] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 08:19:58,215] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 08:19:58,231] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@43783788
+INFO  [2018-11-14 08:19:58,231] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@4ba64e10
+INFO  [2018-11-14 08:19:58,231] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@586e4706
+INFO  [2018-11-14 08:19:58,231] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@587c276c
+INFO  [2018-11-14 08:19:58,231] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@70a56d5d
+INFO  [2018-11-14 08:19:58,231] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@334ec94d
+INFO  [2018-11-14 08:19:58,232] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@7b17b5ba
+INFO  [2018-11-14 08:19:58,232] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@273cca1e
+INFO  [2018-11-14 08:19:58,232] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@258238d0
+INFO  [2018-11-14 08:19:58,236] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 08:19:58,351] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 08:19:58,492] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5934917{HTTP/1.1,[http/1.1]}{0.0.0.0:50643}
+INFO  [2018-11-14 08:19:58,492] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@28b185fa{HTTP/1.1,[http/1.1]}{0.0.0.0:50644}
+INFO  [2018-11-14 08:19:58,495] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 08:19:58,734] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 08:19:58,738] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@25f40af7{/,null,AVAILABLE}
+INFO  [2018-11-14 08:19:58,743] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 08:19:58,755] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@2a68e9cf{/,null,AVAILABLE}
+INFO  [2018-11-14 08:19:58,765] org.eclipse.jetty.server.AbstractConnector: Started application@5934917{HTTP/1.1,[http/1.1]}{0.0.0.0:50643}
+INFO  [2018-11-14 08:19:58,767] org.eclipse.jetty.server.AbstractConnector: Started admin@28b185fa{HTTP/1.1,[http/1.1]}{0.0.0.0:50644}
+INFO  [2018-11-14 08:19:58,767] org.eclipse.jetty.server.Server: Started @9584ms
+INFO  [2018-11-14 08:20:00,741] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 08:20:00,752] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 08:20:00,755] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 08:20:00,758] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 08:20:00,760] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 08:20:00,762] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 08:20:00,773] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 08:20:01,696] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 08:20:01,697] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 08:20:01,699] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 08:20:01,699] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 08:20:01,700] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 08:20:01,701] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 08:20:01,718] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 08:20:01,721] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 08:20:01,721] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 4ms
+INFO  [2018-11-14 08:20:01,722] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 08:20:01,729] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2183601701')
+INFO  [2018-11-14 08:20:01,731] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 08:20:01,948] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    138708 nanoseconds spent acquiring 1 JDBC connections;
+    38251 nanoseconds spent releasing 1 JDBC connections;
+    17627202 nanoseconds spent preparing 1 JDBC statements;
+    1291606 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    196421 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 08:20:02,017] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    49986 nanoseconds spent acquiring 1 JDBC connections;
+    40010 nanoseconds spent releasing 1 JDBC connections;
+    427547 nanoseconds spent preparing 1 JDBC statements;
+    223569 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    237024 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 08:20:02,035] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    47550 nanoseconds spent acquiring 1 JDBC connections;
+    27870 nanoseconds spent releasing 1 JDBC connections;
+    102739 nanoseconds spent preparing 1 JDBC statements;
+    787453 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    218656 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 08:20:02,041] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    54091 nanoseconds spent acquiring 1 JDBC connections;
+    25502 nanoseconds spent releasing 1 JDBC connections;
+    56191 nanoseconds spent preparing 1 JDBC statements;
+    176789 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    159859 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 08:20:02,303] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    50770 nanoseconds spent acquiring 1 JDBC connections;
+    24352 nanoseconds spent releasing 1 JDBC connections;
+    54809 nanoseconds spent preparing 1 JDBC statements;
+    190421 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    138814 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 08:20:02,329] org.eclipse.jetty.server.AbstractConnector: Stopped application@5934917{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 08:20:02,330] org.eclipse.jetty.server.AbstractConnector: Stopped admin@28b185fa{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 08:20:02,332] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@2a68e9cf{/,null,UNAVAILABLE}
+INFO  [2018-11-14 08:20:02,333] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@25f40af7{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:31:51,311] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 09:31:51,314] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 09:31:51,315] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 09:31:51,330] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 09:31:51,423] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 09:31:51,439] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@43783788
+INFO  [2018-11-14 09:31:51,440] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@4ba64e10
+INFO  [2018-11-14 09:31:51,440] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@586e4706
+INFO  [2018-11-14 09:31:51,440] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@587c276c
+INFO  [2018-11-14 09:31:51,440] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@70a56d5d
+INFO  [2018-11-14 09:31:51,440] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@334ec94d
+INFO  [2018-11-14 09:31:51,440] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@7b17b5ba
+INFO  [2018-11-14 09:31:51,440] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@273cca1e
+INFO  [2018-11-14 09:31:51,441] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@258238d0
+INFO  [2018-11-14 09:31:51,445] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 09:31:51,554] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 09:31:51,693] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5934917{HTTP/1.1,[http/1.1]}{0.0.0.0:50904}
+INFO  [2018-11-14 09:31:51,694] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@28b185fa{HTTP/1.1,[http/1.1]}{0.0.0.0:50905}
+INFO  [2018-11-14 09:31:51,697] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 09:31:51,933] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 09:31:51,936] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@25f40af7{/,null,AVAILABLE}
+INFO  [2018-11-14 09:31:51,941] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 09:31:51,951] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@2a68e9cf{/,null,AVAILABLE}
+INFO  [2018-11-14 09:31:51,961] org.eclipse.jetty.server.AbstractConnector: Started application@5934917{HTTP/1.1,[http/1.1]}{0.0.0.0:50904}
+INFO  [2018-11-14 09:31:51,963] org.eclipse.jetty.server.AbstractConnector: Started admin@28b185fa{HTTP/1.1,[http/1.1]}{0.0.0.0:50905}
+INFO  [2018-11-14 09:31:51,963] org.eclipse.jetty.server.Server: Started @9815ms
+INFO  [2018-11-14 09:31:54,119] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:31:54,136] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 09:31:54,138] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:31:54,141] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:31:54,143] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 09:31:54,145] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 09:31:54,156] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 09:31:55,069] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:31:55,070] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 09:31:55,071] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:31:55,072] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:31:55,072] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 09:31:55,073] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:31:55,088] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 09:31:55,090] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 09:31:55,090] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 3ms
+INFO  [2018-11-14 09:31:55,091] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:31:55,098] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2187915074')
+INFO  [2018-11-14 09:31:55,101] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 09:31:55,300] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    62583 nanoseconds spent acquiring 1 JDBC connections;
+    37647 nanoseconds spent releasing 1 JDBC connections;
+    16577941 nanoseconds spent preparing 1 JDBC statements;
+    1246863 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    181368 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:31:55,368] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    49368 nanoseconds spent acquiring 1 JDBC connections;
+    33207 nanoseconds spent releasing 1 JDBC connections;
+    403455 nanoseconds spent preparing 1 JDBC statements;
+    249436 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    161762 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:31:55,384] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    41998 nanoseconds spent acquiring 1 JDBC connections;
+    28583 nanoseconds spent releasing 1 JDBC connections;
+    76918 nanoseconds spent preparing 1 JDBC statements;
+    694783 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    136876 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:31:55,390] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    52047 nanoseconds spent acquiring 1 JDBC connections;
+    24220 nanoseconds spent releasing 1 JDBC connections;
+    64596 nanoseconds spent preparing 1 JDBC statements;
+    204039 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    131808 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:31:55,639] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    38223 nanoseconds spent acquiring 1 JDBC connections;
+    24659 nanoseconds spent releasing 1 JDBC connections;
+    45119 nanoseconds spent preparing 1 JDBC statements;
+    161434 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    134942 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:31:55,663] org.eclipse.jetty.server.AbstractConnector: Stopped application@5934917{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:31:55,664] org.eclipse.jetty.server.AbstractConnector: Stopped admin@28b185fa{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:31:55,667] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@2a68e9cf{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:31:55,668] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@25f40af7{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:40:49,436] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 09:40:49,440] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 09:40:49,441] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 09:40:49,457] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 09:40:49,551] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 09:40:49,566] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@562ab451
+INFO  [2018-11-14 09:40:49,567] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@23c6d607
+INFO  [2018-11-14 09:40:49,567] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@59edc1e7
+INFO  [2018-11-14 09:40:49,567] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@2d6399c6
+INFO  [2018-11-14 09:40:49,567] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@6c9837e0
+INFO  [2018-11-14 09:40:49,567] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@413d8fb2
+INFO  [2018-11-14 09:40:49,567] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@5fb23360
+INFO  [2018-11-14 09:40:49,567] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@ded46ab
+INFO  [2018-11-14 09:40:49,568] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@5f990556
+INFO  [2018-11-14 09:40:49,572] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 09:40:49,681] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 09:40:49,816] org.eclipse.jetty.setuid.SetUIDListener: Opened application@63abfe0{HTTP/1.1,[http/1.1]}{0.0.0.0:50997}
+INFO  [2018-11-14 09:40:49,817] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@211220b3{HTTP/1.1,[http/1.1]}{0.0.0.0:50998}
+INFO  [2018-11-14 09:40:49,820] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 09:40:50,048] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 09:40:50,052] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@5b9233b3{/,null,AVAILABLE}
+INFO  [2018-11-14 09:40:50,057] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 09:40:50,066] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@77d09ade{/,null,AVAILABLE}
+INFO  [2018-11-14 09:40:50,077] org.eclipse.jetty.server.AbstractConnector: Started application@63abfe0{HTTP/1.1,[http/1.1]}{0.0.0.0:50997}
+INFO  [2018-11-14 09:40:50,079] org.eclipse.jetty.server.AbstractConnector: Started admin@211220b3{HTTP/1.1,[http/1.1]}{0.0.0.0:50998}
+INFO  [2018-11-14 09:40:50,079] org.eclipse.jetty.server.Server: Started @9471ms
+INFO  [2018-11-14 09:40:52,006] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:40:52,018] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 09:40:52,020] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:40:52,024] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:40:52,025] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 09:40:52,027] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 09:40:52,038] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 09:40:52,946] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:40:52,947] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 09:40:52,949] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:40:52,949] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:40:52,950] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 09:40:52,951] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:40:52,966] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 09:40:52,969] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 09:40:52,969] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 4ms
+INFO  [2018-11-14 09:40:52,969] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:40:52,976] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2188452951')
+INFO  [2018-11-14 09:40:52,978] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 09:40:53,192] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    74186 nanoseconds spent acquiring 1 JDBC connections;
+    35392 nanoseconds spent releasing 1 JDBC connections;
+    16867586 nanoseconds spent preparing 1 JDBC statements;
+    1232197 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    204120 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:40:53,260] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    52920 nanoseconds spent acquiring 1 JDBC connections;
+    37402 nanoseconds spent releasing 1 JDBC connections;
+    406736 nanoseconds spent preparing 1 JDBC statements;
+    201536 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    173774 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:40:53,276] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    50029 nanoseconds spent acquiring 1 JDBC connections;
+    37256 nanoseconds spent releasing 1 JDBC connections;
+    66289 nanoseconds spent preparing 1 JDBC statements;
+    646295 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    244110 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:40:53,283] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    55986 nanoseconds spent acquiring 1 JDBC connections;
+    38388 nanoseconds spent releasing 1 JDBC connections;
+    65335 nanoseconds spent preparing 1 JDBC statements;
+    213377 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    166420 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:40:53,536] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    38290 nanoseconds spent acquiring 1 JDBC connections;
+    25674 nanoseconds spent releasing 1 JDBC connections;
+    55822 nanoseconds spent preparing 1 JDBC statements;
+    190733 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    145854 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:40:53,559] org.eclipse.jetty.server.AbstractConnector: Stopped application@63abfe0{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:40:53,560] org.eclipse.jetty.server.AbstractConnector: Stopped admin@211220b3{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:40:53,562] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@77d09ade{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:40:53,564] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@5b9233b3{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:43:13,810] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 09:43:13,813] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 09:43:13,814] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 09:43:13,828] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 09:43:13,923] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 09:43:13,941] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@1b17b5cb
+INFO  [2018-11-14 09:43:13,941] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@4c0a2a2b
+INFO  [2018-11-14 09:43:13,941] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@3de10c4e
+INFO  [2018-11-14 09:43:13,941] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@36f4c790
+INFO  [2018-11-14 09:43:13,942] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@73539633
+INFO  [2018-11-14 09:43:13,942] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@58dc1aaa
+INFO  [2018-11-14 09:43:13,942] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@6caca8ed
+INFO  [2018-11-14 09:43:13,942] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@42411fed
+INFO  [2018-11-14 09:43:13,942] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@71e873a8
+INFO  [2018-11-14 09:43:13,945] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 09:43:14,054] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 09:43:14,194] org.eclipse.jetty.setuid.SetUIDListener: Opened application@6b99c534{HTTP/1.1,[http/1.1]}{0.0.0.0:51016}
+INFO  [2018-11-14 09:43:14,194] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@380fb218{HTTP/1.1,[http/1.1]}{0.0.0.0:51017}
+INFO  [2018-11-14 09:43:14,199] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 09:43:14,422] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 09:43:14,426] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@371bf0e3{/,null,AVAILABLE}
+INFO  [2018-11-14 09:43:14,431] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 09:43:14,441] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@47861767{/,null,AVAILABLE}
+INFO  [2018-11-14 09:43:14,453] org.eclipse.jetty.server.AbstractConnector: Started application@6b99c534{HTTP/1.1,[http/1.1]}{0.0.0.0:51016}
+INFO  [2018-11-14 09:43:14,455] org.eclipse.jetty.server.AbstractConnector: Started admin@380fb218{HTTP/1.1,[http/1.1]}{0.0.0.0:51017}
+INFO  [2018-11-14 09:43:14,455] org.eclipse.jetty.server.Server: Started @9339ms
+INFO  [2018-11-14 09:43:16,406] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:43:16,418] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 09:43:16,420] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:43:16,423] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:43:16,425] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 09:43:16,427] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 09:43:16,437] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 09:43:17,344] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:43:17,346] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 09:43:17,347] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:43:17,348] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:43:17,349] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 09:43:17,350] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:43:17,364] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 09:43:17,366] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 09:43:17,366] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 3ms
+INFO  [2018-11-14 09:43:17,367] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:43:17,375] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2188597350')
+INFO  [2018-11-14 09:43:17,377] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 09:43:17,584] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    70783 nanoseconds spent acquiring 1 JDBC connections;
+    34588 nanoseconds spent releasing 1 JDBC connections;
+    17460218 nanoseconds spent preparing 1 JDBC statements;
+    1540983 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    169524 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:43:17,649] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    53343 nanoseconds spent acquiring 1 JDBC connections;
+    36975 nanoseconds spent releasing 1 JDBC connections;
+    419065 nanoseconds spent preparing 1 JDBC statements;
+    242621 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    166954 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:43:17,664] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    45889 nanoseconds spent acquiring 1 JDBC connections;
+    26148 nanoseconds spent releasing 1 JDBC connections;
+    73833 nanoseconds spent preparing 1 JDBC statements;
+    745756 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    160632 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:43:17,670] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    39059 nanoseconds spent acquiring 1 JDBC connections;
+    26295 nanoseconds spent releasing 1 JDBC connections;
+    53634 nanoseconds spent preparing 1 JDBC statements;
+    185301 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    128291 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:43:17,954] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    49841 nanoseconds spent acquiring 1 JDBC connections;
+    26377 nanoseconds spent releasing 1 JDBC connections;
+    75386 nanoseconds spent preparing 1 JDBC statements;
+    242145 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    126708 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:43:17,976] org.eclipse.jetty.server.AbstractConnector: Stopped application@6b99c534{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:43:17,977] org.eclipse.jetty.server.AbstractConnector: Stopped admin@380fb218{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:43:17,979] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@47861767{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:43:17,981] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@371bf0e3{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:50:17,126] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 09:50:17,130] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 09:50:17,131] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 09:50:17,145] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 09:50:17,242] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 09:50:17,258] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@1b17b5cb
+INFO  [2018-11-14 09:50:17,258] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@4c0a2a2b
+INFO  [2018-11-14 09:50:17,258] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@3de10c4e
+INFO  [2018-11-14 09:50:17,258] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@36f4c790
+INFO  [2018-11-14 09:50:17,258] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@73539633
+INFO  [2018-11-14 09:50:17,258] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@58dc1aaa
+INFO  [2018-11-14 09:50:17,258] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@6caca8ed
+INFO  [2018-11-14 09:50:17,258] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@42411fed
+INFO  [2018-11-14 09:50:17,259] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@71e873a8
+INFO  [2018-11-14 09:50:17,262] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 09:50:17,367] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 09:50:17,507] org.eclipse.jetty.setuid.SetUIDListener: Opened application@6b99c534{HTTP/1.1,[http/1.1]}{0.0.0.0:51048}
+INFO  [2018-11-14 09:50:17,508] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@380fb218{HTTP/1.1,[http/1.1]}{0.0.0.0:51049}
+INFO  [2018-11-14 09:50:17,511] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 09:50:17,727] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 09:50:17,731] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@371bf0e3{/,null,AVAILABLE}
+INFO  [2018-11-14 09:50:17,735] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 09:50:17,746] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@47861767{/,null,AVAILABLE}
+INFO  [2018-11-14 09:50:17,757] org.eclipse.jetty.server.AbstractConnector: Started application@6b99c534{HTTP/1.1,[http/1.1]}{0.0.0.0:51048}
+INFO  [2018-11-14 09:50:17,759] org.eclipse.jetty.server.AbstractConnector: Started admin@380fb218{HTTP/1.1,[http/1.1]}{0.0.0.0:51049}
+INFO  [2018-11-14 09:50:17,759] org.eclipse.jetty.server.Server: Started @9323ms
+INFO  [2018-11-14 09:50:18,626] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:50:18,637] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 09:50:18,639] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:50:18,643] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:50:18,645] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 09:50:18,647] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 09:50:18,658] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 09:50:19,521] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:50:19,522] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 09:50:19,524] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:50:19,524] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:50:19,525] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 09:50:19,526] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:50:19,542] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 09:50:19,544] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 09:50:19,544] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 3ms
+INFO  [2018-11-14 09:50:19,545] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:50:19,552] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2189019526')
+INFO  [2018-11-14 09:50:19,555] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 09:50:19,758] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    59543 nanoseconds spent acquiring 1 JDBC connections;
+    37424 nanoseconds spent releasing 1 JDBC connections;
+    16659044 nanoseconds spent preparing 1 JDBC statements;
+    1612850 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    186434 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:50:19,827] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    49953 nanoseconds spent acquiring 1 JDBC connections;
+    30736 nanoseconds spent releasing 1 JDBC connections;
+    343881 nanoseconds spent preparing 1 JDBC statements;
+    204568 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    163242 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:50:19,843] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    45223 nanoseconds spent acquiring 1 JDBC connections;
+    29251 nanoseconds spent releasing 1 JDBC connections;
+    91192 nanoseconds spent preparing 1 JDBC statements;
+    611789 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    155281 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:50:19,849] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    44812 nanoseconds spent acquiring 1 JDBC connections;
+    25666 nanoseconds spent releasing 1 JDBC connections;
+    49176 nanoseconds spent preparing 1 JDBC statements;
+    159345 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    128269 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:50:20,108] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    50430 nanoseconds spent acquiring 1 JDBC connections;
+    37130 nanoseconds spent releasing 1 JDBC connections;
+    66919 nanoseconds spent preparing 1 JDBC statements;
+    279364 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    272376 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:50:20,131] org.eclipse.jetty.server.AbstractConnector: Stopped application@6b99c534{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:50:20,132] org.eclipse.jetty.server.AbstractConnector: Stopped admin@380fb218{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:50:20,135] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@47861767{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:50:20,137] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@371bf0e3{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:54:50,195] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 09:54:50,200] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 09:54:50,202] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 09:54:50,223] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 09:54:50,360] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 09:54:50,379] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@1b17b5cb
+INFO  [2018-11-14 09:54:50,379] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@4c0a2a2b
+INFO  [2018-11-14 09:54:50,379] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@3de10c4e
+INFO  [2018-11-14 09:54:50,379] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@36f4c790
+INFO  [2018-11-14 09:54:50,379] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@73539633
+INFO  [2018-11-14 09:54:50,379] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@58dc1aaa
+INFO  [2018-11-14 09:54:50,380] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@6caca8ed
+INFO  [2018-11-14 09:54:50,380] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@42411fed
+INFO  [2018-11-14 09:54:50,380] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@71e873a8
+INFO  [2018-11-14 09:54:50,384] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 09:54:50,503] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 09:54:50,655] org.eclipse.jetty.setuid.SetUIDListener: Opened application@6b99c534{HTTP/1.1,[http/1.1]}{0.0.0.0:51088}
+INFO  [2018-11-14 09:54:50,656] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@380fb218{HTTP/1.1,[http/1.1]}{0.0.0.0:51089}
+INFO  [2018-11-14 09:54:50,659] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 09:54:50,914] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 09:54:50,919] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@371bf0e3{/,null,AVAILABLE}
+INFO  [2018-11-14 09:54:50,924] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 09:54:50,938] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@47861767{/,null,AVAILABLE}
+INFO  [2018-11-14 09:54:50,955] org.eclipse.jetty.server.AbstractConnector: Started application@6b99c534{HTTP/1.1,[http/1.1]}{0.0.0.0:51088}
+INFO  [2018-11-14 09:54:50,961] org.eclipse.jetty.server.AbstractConnector: Started admin@380fb218{HTTP/1.1,[http/1.1]}{0.0.0.0:51089}
+INFO  [2018-11-14 09:54:50,961] org.eclipse.jetty.server.Server: Started @9756ms
+INFO  [2018-11-14 09:54:53,643] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:54:53,655] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 09:54:53,657] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:54:53,661] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:54:53,663] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 09:54:53,665] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 09:54:53,675] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 09:54:54,563] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:54:54,565] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 09:54:54,567] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:54:54,567] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:54:54,568] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 09:54:54,569] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 09:54:54,584] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 09:54:54,587] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 09:54:54,587] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 4ms
+INFO  [2018-11-14 09:54:54,588] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 09:54:54,596] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2189294569')
+INFO  [2018-11-14 09:54:54,599] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 09:54:54,820] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    88554 nanoseconds spent acquiring 1 JDBC connections;
+    48323 nanoseconds spent releasing 1 JDBC connections;
+    26820871 nanoseconds spent preparing 1 JDBC statements;
+    1556187 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    233687 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:54:54,898] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    62890 nanoseconds spent acquiring 1 JDBC connections;
+    40881 nanoseconds spent releasing 1 JDBC connections;
+    356451 nanoseconds spent preparing 1 JDBC statements;
+    191245 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    232008 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:54:54,916] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    45210 nanoseconds spent acquiring 1 JDBC connections;
+    35820 nanoseconds spent releasing 1 JDBC connections;
+    85246 nanoseconds spent preparing 1 JDBC statements;
+    635452 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    214344 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:54:54,922] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    52502 nanoseconds spent acquiring 1 JDBC connections;
+    26301 nanoseconds spent releasing 1 JDBC connections;
+    55922 nanoseconds spent preparing 1 JDBC statements;
+    168457 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    127801 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:54:55,193] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    39431 nanoseconds spent acquiring 1 JDBC connections;
+    26843 nanoseconds spent releasing 1 JDBC connections;
+    45546 nanoseconds spent preparing 1 JDBC statements;
+    184281 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    128025 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 09:54:55,217] org.eclipse.jetty.server.AbstractConnector: Stopped application@6b99c534{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:54:55,219] org.eclipse.jetty.server.AbstractConnector: Stopped admin@380fb218{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 09:54:55,221] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@47861767{/,null,UNAVAILABLE}
+INFO  [2018-11-14 09:54:55,222] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@371bf0e3{/,null,UNAVAILABLE}
+INFO  [2018-11-14 10:24:44,848] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 10:24:44,851] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 10:24:44,853] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 10:24:44,868] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 10:24:44,950] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 10:24:44,966] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@13c336ed
+INFO  [2018-11-14 10:24:44,966] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@1e0b53f6
+INFO  [2018-11-14 10:24:44,967] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@779f4ee6
+INFO  [2018-11-14 10:24:44,967] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@4fc26184
+INFO  [2018-11-14 10:24:44,967] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@cbcec62
+INFO  [2018-11-14 10:24:44,967] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@3140f760
+INFO  [2018-11-14 10:24:44,967] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@1ee5bbe1
+INFO  [2018-11-14 10:24:44,967] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@258a435c
+INFO  [2018-11-14 10:24:44,967] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@6aee963a
+INFO  [2018-11-14 10:24:44,972] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 10:24:44,993] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 10:24:45,130] org.eclipse.jetty.setuid.SetUIDListener: Opened application@d333240{HTTP/1.1,[http/1.1]}{0.0.0.0:51458}
+INFO  [2018-11-14 10:24:45,130] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@7fc89bb7{HTTP/1.1,[http/1.1]}{0.0.0.0:51459}
+INFO  [2018-11-14 10:24:45,133] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 10:24:45,350] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 10:24:45,353] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@73e26f0f{/,null,AVAILABLE}
+INFO  [2018-11-14 10:24:45,358] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 10:24:45,367] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@50bd67c5{/,null,AVAILABLE}
+INFO  [2018-11-14 10:24:45,377] org.eclipse.jetty.server.AbstractConnector: Started application@d333240{HTTP/1.1,[http/1.1]}{0.0.0.0:51458}
+INFO  [2018-11-14 10:24:45,379] org.eclipse.jetty.server.AbstractConnector: Started admin@7fc89bb7{HTTP/1.1,[http/1.1]}{0.0.0.0:51459}
+INFO  [2018-11-14 10:24:45,379] org.eclipse.jetty.server.Server: Started @9790ms
+INFO  [2018-11-14 10:24:56,269] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:24:56,281] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 10:24:56,283] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:24:56,303] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:24:56,306] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 10:24:56,308] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 10:24:56,321] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 10:24:57,189] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:24:57,190] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 10:24:57,192] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:24:57,192] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:24:57,193] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 10:24:57,194] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:24:57,211] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 10:24:57,214] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 10:24:57,214] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 4ms
+INFO  [2018-11-14 10:24:57,215] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:24:57,223] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2191097194')
+INFO  [2018-11-14 10:24:57,226] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 10:24:57,426] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    52367 nanoseconds spent acquiring 1 JDBC connections;
+    34143 nanoseconds spent releasing 1 JDBC connections;
+    22100323 nanoseconds spent preparing 1 JDBC statements;
+    1208974 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    176346 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:24:57,498] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    42911 nanoseconds spent acquiring 1 JDBC connections;
+    36345 nanoseconds spent releasing 1 JDBC connections;
+    355372 nanoseconds spent preparing 1 JDBC statements;
+    178603 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    158115 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:24:57,516] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    49248 nanoseconds spent acquiring 1 JDBC connections;
+    42098 nanoseconds spent releasing 1 JDBC connections;
+    67620 nanoseconds spent preparing 1 JDBC statements;
+    608555 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    176872 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:24:57,522] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    55962 nanoseconds spent acquiring 1 JDBC connections;
+    24649 nanoseconds spent releasing 1 JDBC connections;
+    47900 nanoseconds spent preparing 1 JDBC statements;
+    162379 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    126774 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:24:57,787] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    42392 nanoseconds spent acquiring 1 JDBC connections;
+    24721 nanoseconds spent releasing 1 JDBC connections;
+    53126 nanoseconds spent preparing 1 JDBC statements;
+    220792 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    129026 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:24:57,812] org.eclipse.jetty.server.AbstractConnector: Stopped application@d333240{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 10:24:57,813] org.eclipse.jetty.server.AbstractConnector: Stopped admin@7fc89bb7{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 10:24:57,815] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@50bd67c5{/,null,UNAVAILABLE}
+INFO  [2018-11-14 10:24:57,817] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@73e26f0f{/,null,UNAVAILABLE}
+INFO  [2018-11-14 10:52:17,533] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 10:52:17,536] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 10:52:17,538] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 10:52:17,552] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 10:52:17,629] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 10:52:17,646] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@13c336ed
+INFO  [2018-11-14 10:52:17,647] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@1e0b53f6
+INFO  [2018-11-14 10:52:17,647] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@779f4ee6
+INFO  [2018-11-14 10:52:17,647] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@4fc26184
+INFO  [2018-11-14 10:52:17,647] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@cbcec62
+INFO  [2018-11-14 10:52:17,647] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@3140f760
+INFO  [2018-11-14 10:52:17,647] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@1ee5bbe1
+INFO  [2018-11-14 10:52:17,647] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@258a435c
+INFO  [2018-11-14 10:52:17,648] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@6aee963a
+INFO  [2018-11-14 10:52:17,651] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 10:52:17,672] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 10:52:17,822] org.eclipse.jetty.setuid.SetUIDListener: Opened application@d333240{HTTP/1.1,[http/1.1]}{0.0.0.0:51662}
+INFO  [2018-11-14 10:52:17,823] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@7fc89bb7{HTTP/1.1,[http/1.1]}{0.0.0.0:51663}
+INFO  [2018-11-14 10:52:17,826] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 10:52:18,057] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 10:52:18,060] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@73e26f0f{/,null,AVAILABLE}
+INFO  [2018-11-14 10:52:18,066] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 10:52:18,076] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@50bd67c5{/,null,AVAILABLE}
+INFO  [2018-11-14 10:52:18,086] org.eclipse.jetty.server.AbstractConnector: Started application@d333240{HTTP/1.1,[http/1.1]}{0.0.0.0:51662}
+INFO  [2018-11-14 10:52:18,089] org.eclipse.jetty.server.AbstractConnector: Started admin@7fc89bb7{HTTP/1.1,[http/1.1]}{0.0.0.0:51663}
+INFO  [2018-11-14 10:52:18,090] org.eclipse.jetty.server.Server: Started @10104ms
+INFO  [2018-11-14 10:52:20,235] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:52:20,247] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 10:52:20,249] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:52:20,252] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:52:20,254] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 10:52:20,256] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 10:52:20,266] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 10:52:21,065] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:52:21,066] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 10:52:21,068] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:52:21,068] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:52:21,069] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 10:52:21,070] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:52:21,084] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 10:52:21,087] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 10:52:21,087] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 4ms
+INFO  [2018-11-14 10:52:21,088] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:52:21,095] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2192741070')
+INFO  [2018-11-14 10:52:21,097] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 10:52:21,273] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    58083 nanoseconds spent acquiring 1 JDBC connections;
+    37453 nanoseconds spent releasing 1 JDBC connections;
+    16793209 nanoseconds spent preparing 1 JDBC statements;
+    1152248 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    184000 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:21,338] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    51969 nanoseconds spent acquiring 1 JDBC connections;
+    34894 nanoseconds spent releasing 1 JDBC connections;
+    409916 nanoseconds spent preparing 1 JDBC statements;
+    167063 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    166848 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:21,353] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    54119 nanoseconds spent acquiring 1 JDBC connections;
+    27230 nanoseconds spent releasing 1 JDBC connections;
+    67381 nanoseconds spent preparing 1 JDBC statements;
+    584456 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    209819 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:21,359] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    51663 nanoseconds spent acquiring 1 JDBC connections;
+    24364 nanoseconds spent releasing 1 JDBC connections;
+    55511 nanoseconds spent preparing 1 JDBC statements;
+    164463 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    139270 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:21,630] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    52407 nanoseconds spent acquiring 1 JDBC connections;
+    24725 nanoseconds spent releasing 1 JDBC connections;
+    77558 nanoseconds spent preparing 1 JDBC statements;
+    183515 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    124751 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:21,654] org.eclipse.jetty.server.AbstractConnector: Stopped application@d333240{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 10:52:21,655] org.eclipse.jetty.server.AbstractConnector: Stopped admin@7fc89bb7{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 10:52:21,656] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@50bd67c5{/,null,UNAVAILABLE}
+INFO  [2018-11-14 10:52:21,658] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@73e26f0f{/,null,UNAVAILABLE}
+INFO  [2018-11-14 10:52:54,514] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2018-11-14 10:52:54,517] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2018-11-14 10:52:54,519] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2018-11-14 10:52:54,532] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2018-11-14 10:52:54,613] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2018-11-14 10:52:54,635] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@13c336ed
+INFO  [2018-11-14 10:52:54,635] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@1e0b53f6
+INFO  [2018-11-14 10:52:54,635] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@779f4ee6
+INFO  [2018-11-14 10:52:54,635] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@4fc26184
+INFO  [2018-11-14 10:52:54,635] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@cbcec62
+INFO  [2018-11-14 10:52:54,635] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@3140f760
+INFO  [2018-11-14 10:52:54,635] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@1ee5bbe1
+INFO  [2018-11-14 10:52:54,636] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@258a435c
+INFO  [2018-11-14 10:52:54,636] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@6aee963a
+INFO  [2018-11-14 10:52:54,643] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2018-11-14 10:52:54,666] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+INFO  [2018-11-14 10:52:54,787] org.eclipse.jetty.setuid.SetUIDListener: Opened application@d333240{HTTP/1.1,[http/1.1]}{0.0.0.0:51670}
+INFO  [2018-11-14 10:52:54,787] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@7fc89bb7{HTTP/1.1,[http/1.1]}{0.0.0.0:51671}
+INFO  [2018-11-14 10:52:54,790] org.eclipse.jetty.server.Server: jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 10.0.1+10
+INFO  [2018-11-14 10:52:55,023] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filteredhello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protectedadmin (com.example.helloworld.resources.ProtectedResource)
+    GET     /ui/{personId} (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/clam (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_freemarker (com.example.helloworld.resources.UIResource)
+    GET     /ui/{personId}/view_mustache (com.example.helloworld.resources.UIResource)
+    GET     /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    POST    /update-emailserver-av (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /update-emailserver-av/date (com.example.helloworld.resources.CuEmailserverUpdateVirus)
+    GET     /updateav (com.example.helloworld.resources.EmailServerResource)
+    GET     /views/command.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2018-11-14 10:52:55,026] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@73e26f0f{/,null,AVAILABLE}
+INFO  [2018-11-14 10:52:55,031] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2018-11-14 10:52:55,044] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@50bd67c5{/,null,AVAILABLE}
+INFO  [2018-11-14 10:52:55,056] org.eclipse.jetty.server.AbstractConnector: Started application@d333240{HTTP/1.1,[http/1.1]}{0.0.0.0:51670}
+INFO  [2018-11-14 10:52:55,058] org.eclipse.jetty.server.AbstractConnector: Started admin@7fc89bb7{HTTP/1.1,[http/1.1]}{0.0.0.0:51671}
+INFO  [2018-11-14 10:52:55,059] org.eclipse.jetty.server.Server: Started @8673ms
+INFO  [2018-11-14 10:52:55,925] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:52:55,938] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2018-11-14 10:52:55,941] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:52:55,944] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:52:55,945] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2018-11-14 10:52:55,948] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2018-11-14 10:52:55,959] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2018-11-14 10:52:56,762] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:52:56,763] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2018-11-14 10:52:56,765] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:52:56,765] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:52:56,766] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2018-11-14 10:52:56,767] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2018-11-14 10:52:56,782] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.people (id BIGINT AUTO_INCREMENT NOT NULL, fullName VARCHAR(255) NOT NULL, jobTitle VARCHAR(255), CONSTRAINT PK_PEOPLE PRIMARY KEY (id))
+INFO  [2018-11-14 10:52:56,784] liquibase.changelog.ChangeSet: Table people created
+INFO  [2018-11-14 10:52:56,784] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::codahale ran successfully in 3ms
+INFO  [2018-11-14 10:52:56,785] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2018-11-14 10:52:56,791] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'codahale', 'migrations.xml', NOW(), 1, '8:a466b7f04155c06f80453d6d5a36b55c', 'createTable tableName=people', '', 'EXECUTED', NULL, NULL, '3.6.2', '2192776768')
+INFO  [2018-11-14 10:52:56,793] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2018-11-14 10:52:56,952] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    64284 nanoseconds spent acquiring 1 JDBC connections;
+    35704 nanoseconds spent releasing 1 JDBC connections;
+    16298171 nanoseconds spent preparing 1 JDBC statements;
+    1573340 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    180219 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:57,019] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    49720 nanoseconds spent acquiring 1 JDBC connections;
+    36782 nanoseconds spent releasing 1 JDBC connections;
+    509586 nanoseconds spent preparing 1 JDBC statements;
+    260063 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    170061 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:57,036] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    48555 nanoseconds spent acquiring 1 JDBC connections;
+    31475 nanoseconds spent releasing 1 JDBC connections;
+    90735 nanoseconds spent preparing 1 JDBC statements;
+    765567 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    176226 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:57,043] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    53944 nanoseconds spent acquiring 1 JDBC connections;
+    26547 nanoseconds spent releasing 1 JDBC connections;
+    50804 nanoseconds spent preparing 1 JDBC statements;
+    171800 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    134773 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:57,298] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    50115 nanoseconds spent acquiring 1 JDBC connections;
+    25396 nanoseconds spent releasing 1 JDBC connections;
+    65500 nanoseconds spent preparing 1 JDBC statements;
+    265731 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    124984 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2018-11-14 10:52:57,321] org.eclipse.jetty.server.AbstractConnector: Stopped application@d333240{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 10:52:57,322] org.eclipse.jetty.server.AbstractConnector: Stopped admin@7fc89bb7{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2018-11-14 10:52:57,324] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@50bd67c5{/,null,UNAVAILABLE}
+INFO  [2018-11-14 10:52:57,325] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@73e26f0f{/,null,UNAVAILABLE}

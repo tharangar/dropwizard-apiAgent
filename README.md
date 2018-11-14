@@ -54,45 +54,62 @@ of the PersonDAO in their constructors.
 
 As with all the modules the db example is wired up in the `initialize` function of the `HelloWorldApplication`.
 
-# Running The Application
+# Start Developments
 
+To start development the project can be downloaded from the github repository.
+
+      git clone https://github.com/tharangar/dropwizard-apiAgent.git
+      
+Change to the directory
+
+	cd dropwizard-apiAgent
+	
 To test the example application run the following commands.
 
 * To create the example, package the application using [Apache Maven](https://maven.apache.org/) from the root dropwizard directory.
 
-        cd dropwizard
-        ./mvnw package
-        cd dropwizard-example
+
+	mvn compile
+
+Installing necessary softwares
+
+        mvn install
+
+Making the package for deployment
+
+        mvn package
+
+# Running The Application
 
 * To setup the h2 database run.
 
-        java -jar target/dropwizard-example-$DW_VERSION.jar db migrate example.yml
+        java -jar target/dw-agent-1.4.0-SNAPSHOT.jar db migrate example.yml
 
 * To run the server run.
 
-        java -jar ./target/cu-agent-1.4.0-SNAPSHOT.jar server example.yml
+        java -jar ./target/dw-agent-1.4.0-SNAPSHOT.jar server example.yml
 
 * To hit the Hello World example (hit refresh a few times).
 
-	http://localhost:8080/hello-world
+	http://localhost:8181/hello-world
 
 * To post data into the application.
 
-	curl -H "Content-Type: application/json" -X POST -d '{"fullName":"Other Person","jobTitle":"Other Title"}' http://localhost:8080/people
+	curl -H "Content-Type: application/json" -X POST -d '{"fullName":"T2","jobTitle":"TT"}' http://localhost:8181/people
 	
 	open http://localhost:8080/people
 	
 * view one person details
   
-  open http://localhost:8080/people/1
+  open http://localhost:8181/people/1
  
  * Run internal shell command
  
- http://localhost:8080/updateav
+ http://localhost:8181/updateav
  
  * Load a User interface instead of a json output
  
- http://localhost:8080/ui/clam
+ http://localhost:8181/ui/clam
 	
 * Further Development ------------------------------------------------------------------------
 
@@ -105,4 +122,4 @@ To test the example application run the following commands.
  
  * After theat run the server again
  
- java -jar ./target/cu-agent-1.4.0-SNAPSHOT.jar server example.yml
+ java -jar ./target/dw-agent-1.4.0-SNAPSHOT.jar server example.yml

@@ -21,6 +21,10 @@ public class PersonDAO extends AbstractDAO<Person> {
     }
 
     public List<Person> findAll() {
-        return list(namedQuery("com.example.helloworld.core.Person.findAll"));
+        //return list(namedQuery("com.example.helloworld.core.Person.findAll"));
+    
+         factory.getSessionFactory.openSession.namedQuery("com.example.helloworld.core.Person.findAll");
+        
+    
     }
 }
