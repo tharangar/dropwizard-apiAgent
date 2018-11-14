@@ -61,12 +61,27 @@ To start development the project can be downloaded from the github repository.
       git clone https://github.com/tharangar/dropwizard-apiAgent.git
       
 Change to the directory
+<<<<<<< HEAD
+=======
+
+	cd dropwizard-apiAgent/
+	
+Start maven compile
+
+	mvn compile
+	
+
+
+
+
+# Running The Application
+>>>>>>> f3689add4a3c29feb28fc99818f1217d4bc387b7
 
 	cd dropwizard-apiAgent
 	
 To test the example application run the following commands.
 
-* To create the example, package the application using [Apache Maven](https://maven.apache.org/) from the root dropwizard directory.
+* To create the example, package the application usToing [Apache Maven](https://maven.apache.org/) from the root dropwizard directory.
 
 
 	mvn compile
