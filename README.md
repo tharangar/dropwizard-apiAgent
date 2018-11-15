@@ -58,11 +58,10 @@ As with all the modules the db example is wired up in the `initialize` function 
 
 To start development the project can be downloaded from the github repository.
 
-      git clone https://github.com/tharangar/dropwizard-apiAgent.git
+       git clone https://github.com/tharangar/dropwizard-apiAgent.git
       
 Change to the directory
-<<<<<<< HEAD
-=======
+
 
 	cd dropwizard-apiAgent/
 	
@@ -75,16 +74,13 @@ Start maven compile
 
 
 # Running The Application
->>>>>>> f3689add4a3c29feb28fc99818f1217d4bc387b7
 
 	cd dropwizard-apiAgent
 	
 To test the example application run the following commands.
 
 * To create the example, package the application usToing [Apache Maven](https://maven.apache.org/) from the root dropwizard directory.
-
-
-	mvn compile
+         mvn compile
 
 Installing necessary softwares
 
@@ -112,7 +108,7 @@ Making the package for deployment
 
 	curl -H "Content-Type: application/json" -X POST -d '{"fullName":"T2","jobTitle":"TT"}' http://localhost:8181/people
 	
-	open http://localhost:8080/people
+	open http://localhost:8181/people
 	
 * view one person details
   
